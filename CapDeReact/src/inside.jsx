@@ -84,13 +84,13 @@ function Inside() {
 
   return (
     <>
+      <h1>WOLFBYTE WEB</h1>
+
       <form onSubmit={handleSubmit}>
-          
-              <h1>WOLFBYTE WEB</h1>
               <div className='inputs'>
                 <div className='userName'>
                   <h3>Digite seu Código</h3>
-                  <input onChange={(event) => handleChange(event, setCode)}type='text' name="usr" id="usr" placeholder='Seu acesso da engenharia'/>
+                  <input onChange={(event) => handleChange(event, setCode)}type='text' name="usr" id="usr" placeholder='Código'/>
                 </div>
                 
                 
