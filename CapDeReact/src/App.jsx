@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import './App.css'
-import api from './api'
+import api from '../api'
+import {useNavigate} from 'react-router-dom'
 
 function App() {
     const [username, setName] = useState('')
     const [password, setPass] = useState('')
-
+    const navigate = useNavigate()
 
     const handleChange = (event, setText) => {
       setText(event.target.value);
@@ -24,8 +25,10 @@ function App() {
         position: "top-center",
         className: "Msg",
         });
+        localStorage.setItem("token", '123123 ')
         setTimeout(() => {
-            window.location.href = 'https://www.cs-cefetrj.com.br/';
+            //window.location.href = 'https://www.cs-cefetrj.com.br/';
+            navigate("/inside")
         }, 3000);
       }
       else if(auth == 403){

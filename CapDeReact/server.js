@@ -27,3 +27,16 @@ app.post('/login', (req, res) =>{
     }
 
 })
+
+app.post('/data', (req, res) =>{
+    token = req.headers.authorization
+    data = req.body
+    code = data.code
+    console.log(token, code)
+    if(token == 'Bearer 123123' & code == 'jpwf' ){
+        res.json(200)
+    }
+    else{
+        res.json(403)
+    }
+})
